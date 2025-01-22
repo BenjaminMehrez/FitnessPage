@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 
+:root {
+    --color: #c2f523;
+}
+
+header {
+    background-image: linear-gradient(0deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.9)), url("../public/portada.jpg");
+    background-size: cover;
+    background-position: end;
+    height: 75vh;
+}
+
 .hero{
     background-image: linear-gradient(0deg,
     rgba(0, 0, 0, 0.8),
@@ -10,4 +23,19 @@
     background-size: cover;
     background-position: start;
     height: 75vh;
+}
+
+.color-primary {
+    color: var(--color);
+}
+
+.color-primary-hover:hover {
+    color: var(--color);
+}
+
+.link:hover {
+    color: var(--color);
+    border-bottom: var(--color);
+    border-bottom: 2px solid var(--color);
+    padding-bottom: 3px;
 }
