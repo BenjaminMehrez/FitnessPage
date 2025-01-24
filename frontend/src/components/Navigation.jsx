@@ -34,16 +34,16 @@ function Navigation() {
                     <nav className={`${isOpen ? "block bg-stone-950" : "hidden"} h-screen absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto md:flex`}>
                         <ul className="flex flex-col md:flex-row items-center md:gap-8 gap-20 py-20 md:py-0 px-8 md:px-0">
                             <li>
-                                <Link to="/" className="link font-bold transition-colors">Home</Link>
+                                <Link to="/" className="link font-bold duration-300">Home</Link>
                             </li>
                             <li>
-                                <Link to="/about" className="link font-bold transition-colors">About</Link>
+                                <Link to="/aboutus" className="link font-bold duration-300">About</Link>
                             </li>
                             <li>
-                                <Link to="/products" className="link font-bold transition-colors">Products</Link>
+                                <Link to="/products" className="link font-bold duration-300">Products</Link>
                             </li>
                             <li>
-                                <Link to="/contact" className="link font-bold transition-colors">Contact</Link>
+                                <Link to="/contact" className="link font-bold duration-300">Contact</Link>
                             </li>
                         </ul>
                     </nav>

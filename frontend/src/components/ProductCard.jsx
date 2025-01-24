@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -6,9 +5,14 @@ import { useNavigate } from "react-router-dom";
 export function ProductCard({product}) {
     
     return (
-        <div>
-            <h1>{product.title}</h1>
-            <p>{product.description}</p>
+        <div class="product">
+            <img src={product.image} alt={product.title} class="product-image" />
+            <div class="product-info">
+                <h2>{product.title}</h2>
+                <p>{product.description}</p>
+                <p>Precio: <span class="product-price">${product.price}</span></p>
+                <button class="product-button">Agregar al carrito</button>
+            </div>
         </div>
     )
 

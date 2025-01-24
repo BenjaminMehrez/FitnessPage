@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import Contact from './components/Contact'
 import Aboutus from './components/Aboutus'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
                     <Route path="/contact/" element={<Contact />} />
                 </Routes>
             </main>
-            {/* footer */}
+            <Footer />
         </BrowserRouter>
 
 
