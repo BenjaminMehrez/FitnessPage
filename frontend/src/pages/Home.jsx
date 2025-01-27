@@ -2,7 +2,7 @@ import AboutUs from "../components/Aboutus";
 import Hero from "../components/Hero";
 import { useEffect, useState } from "react"
 import { getAllProducts } from "../api/products.api"
-import { ProductCard } from "../components/ProductCard";
+import  ProductCard  from "../components/ProductCard";
 
 
 

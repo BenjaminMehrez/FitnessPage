@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getAllProducts } from "../api/products.api"
-import { ProductCard } from "./ProductCard"
+import ProductCard from "./ProductCard"
 
 
 
