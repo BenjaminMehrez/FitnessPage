@@ -1,7 +1,6 @@
 import AboutUs from "../components/Aboutus";
+import CategoryCard from "../components/CategoryCard";
 import Hero from "../components/Hero";
-import { useEffect, useState } from "react"
-import { getAllProducts } from "../api/products.api"
 import  ProductCard  from "../components/ProductCard";
 
 
@@ -9,25 +8,25 @@ import  ProductCard  from "../components/ProductCard";
 
 function Home() {
 
-    const [products, setProducts] = useState([]);
-    const [error, setError] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
+    // const [products, setProducts] = useState([]);
+    // const [error, setError] = useState(null);
+    // const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            setIsLoading(true);
-            try {
-                const response = await getAllProducts();
-                setProducts(response);
-            } catch (error) {
-                setError('Error al cargar los productos');
-                console.error('Error fetching products:', error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         setIsLoading(true);
+    //         try {
+    //             const response = await getAllProducts();
+    //             setProducts(response);
+    //         } catch (error) {
+    //             setError('Error al cargar los productos');
+    //             console.error('Error fetching products:', error);
+    //         } finally {
+    //             setIsLoading(false);
+    //         }
+    //     };
+    //     fetchData();
+    // }, []);
 
 
     return (
@@ -39,21 +38,13 @@ function Home() {
             <AboutUs />
 
             {/* Featured Products */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
+            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-200">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl font-bold text-center mb-8">Featured Products</h2>
                     <div className="flex mt-20 gap-20">
-                        {isLoading ? (
-                            <div>Loading products...</div>
-                        ) : error ? (
-                            <div>Error loading products: {error}</div>
-                        ) : products.length === 0 ? (
-                            <div>No products available</div>
-                        ) : (
-                            products.map(product => (
-                                <ProductCard key={product.pid} product={product} />
-                            ))
-                        )}
+                        <CategoryCard category={'Protein Powders'} description={'Vegan Protein Powder for Athletes.'} image={'https://m.media-amazon.com/images/I/71n6rQ6jw0L.__AC_SX300_SY300_QL70_ML2_.jpg'}/>
+                        <CategoryCard category={'Pre-Workout Supplements'} description={'Top Pre-Workout for Energy'} image={'https://m.media-amazon.com/images/I/71vltdpy4GL.__AC_SX300_SY300_QL70_ML2_.jpg'}/>
+                        <CategoryCard category={'Fat Burners'} description={'Natural Fat Burners for Men/Women.'} image={'https://m.media-amazon.com/images/I/61dETr3RJDL._AC_SX679_.jpg'}/>
                     </div>
                 </div>
             </section>

@@ -25,7 +25,7 @@ class Product(models.Model):
     
 class Category(models.Model):
     cid = ShortUUIDField(unique=True, length=10, max_length=20, prefix='cat', alphabet='abcdefgh12345')
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=25)
     
     class Meta:
         verbose_name_plural = 'Categories'
