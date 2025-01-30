@@ -1,83 +1,147 @@
 import AboutUs from "../components/Aboutus";
 import CategoryCard from "../components/CategoryCard";
 import Hero from "../components/Hero";
-import  ProductCard  from "../components/ProductCard";
 
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
+// IMG
+import imgprotein from "/prote.jpeg";
+import preworkout from "/preworkout.jpg";
+import imgminerals from "/minerales.jpg";
+import whoimg1 from "/whoimg1.jpg";
+import whoimg2 from "/whoimg2.jpg";
+import whoimg3 from "/whoimg3.jpg";
+import imgpesa from "/pesa.svg";
+import imgarm from "/arm.svg";
+import imgclock from "/clock.svg";
 
 function Home() {
 
-    // const [products, setProducts] = useState([]);
-    // const [error, setError] = useState(null);
-    // const [isLoading, setIsLoading] = useState(false);
+  return (
+    <div>
+      {/* Hero Section */}
+      <Hero />
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         setIsLoading(true);
-    //         try {
-    //             const response = await getAllProducts();
-    //             setProducts(response);
-    //         } catch (error) {
-    //             setError('Error al cargar los productos');
-    //             console.error('Error fetching products:', error);
-    //         } finally {
-    //             setIsLoading(false);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
+      {/* Breve descriptión */}
+      <AboutUs />
 
-
-    return (
-        <div>
-            {/* Hero Section */}
-            <Hero />
-
-            {/* Breve descriptión */}
-            <AboutUs />
-
-            {/* Featured Products */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-200">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-8">Featured Products</h2>
-                    <div className="flex mt-20 gap-20">
-                        <CategoryCard category={'Protein Powders'} description={'Vegan Protein Powder for Athletes.'} image={'https://m.media-amazon.com/images/I/71n6rQ6jw0L.__AC_SX300_SY300_QL70_ML2_.jpg'}/>
-                        <CategoryCard category={'Pre-Workout Supplements'} description={'Top Pre-Workout for Energy'} image={'https://m.media-amazon.com/images/I/71vltdpy4GL.__AC_SX300_SY300_QL70_ML2_.jpg'}/>
-                        <CategoryCard category={'Fat Burners'} description={'Natural Fat Burners for Men/Women.'} image={'https://m.media-amazon.com/images/I/61dETr3RJDL._AC_SX679_.jpg'}/>
-                    </div>
-                </div>
-            </section>
-
-            {/* More information */}
-            <section className="py-24 px-4 bg-gray-50">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-8">Why Choose Us?</h2>
-                    <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-                        Because our mission is to help you reach your full potential. At FitZone, we offer more than just a gym; we provide a complete transformation experience.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                        <div className="flex flex-col items-center text-center">
-                            <h3 className="text-xl font-semibold mb-2">High-Quality Equipment</h3>
-                            <p className="text-gray-600">We offer the best brands and equipment for your workout.</p>
-                        </div>
-                        <div className="flex flex-col items-center text-center">
-                            <h3 className="text-xl font-semibold mb-2">Flexible Hours</h3>
-                            <p className="text-gray-600">Open 24/7 so you can train whenever it suits you best.</p>
-                        </div>
-                        <div className="flex flex-col items-center text-center">
-                            <h3 className="text-xl font-semibold mb-2">Expert Trainers</h3>
-                            <p className="text-gray-600">Our certified team is ready to guide you.</p>
-                        </div>
-                        <div className="flex flex-col items-center text-center">
-                            <h3 className="text-xl font-semibold mb-2">Motivating Community</h3>
-                            <p className="text-gray-600">Join a fitness family that will inspire you every day.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      {/* Featured Products */}
+      <section className="pt-20 pb-32 px-12 bg-gray-200">
+        <div className="">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Featured Products
+          </h2>
+          <p className="text-lg text-center">
+            Carefully curated supplements for energy, strength, and daily
+            health.
+          </p>
+          <div className="flex flex-col md:flex-row flex-wrap justify-center items-center mt-14 gap-10">
+            <CategoryCard
+              category={"Protein Powders"}
+              description={"Fuel Your Workouts: Premium Vegan Protein Powder"}
+              image={imgprotein}
+            />
+            <CategoryCard
+              category={"Pre-Workout Supplements"}
+              description={"Unleash Your Energy: Top Pre-Workout Supplement"}
+              image={preworkout}
+            />
+            <CategoryCard
+              category={"Vitamins and Minerals"}
+              description={"Daily Wellness: Essential Multivitamins & Minerals"}
+              image={imgminerals}
+            />
+          </div>
         </div>
-    );
+      </section>
+
+      {/* More information */}
+      <section className="pt-20 pb-32 px-12">
+        <div className="flex flex-col">
+          <h2 className="text-2xl font-bold text-center mb-8">
+            Why Choose Us?
+          </h2>
+          <p className="text-md text-center text-gray-600 mb-16">
+            Because our mission is to help you reach your full potential. At
+            FitZone, we offer more than just a gym; we provide a complete
+            transformation experience.
+          </p>
+          <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-30">
+            <div className="flex flex-col items-center text-center max-w-80 bg-gray-200" data-aos="zoom-out">
+              <div className="py-10 px-8 pb-20">
+                <h3 className="text-xl font-semibold mb-5">
+                  High-Quality Equipment
+                </h3>
+                <p className="text-gray-600 text-base/7">
+                  We offer the best brands and equipment for your workout.
+                </p>
+              </div>
+              <div className="relative flex justify-center items-center">
+                <img
+                  src={whoimg1}
+                  alt="whoimg1"
+                  className="w-80 h-64 object-cover object-top"
+                />
+
+                <img
+                  src={imgpesa}
+                  alt="imgpesa"
+                  className="absolute inset-0 mx-auto -top-10 w-24 background-primary p-5 rounded-full"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center text-center max-w-80 bg-gray-200" data-aos="zoom-out">
+              <div className="py-10 px-8 pb-20">
+                <h3 className="text-xl font-semibold mb-5">Flexible Hours</h3>
+                <p className="text-gray-600 text-base/7">
+                  Open 24/7 so you can train whenever it suits you best.
+                </p>
+              </div>
+              <div className="relative flex justify-center items-center">
+                <img
+                  src={whoimg2}
+                  alt="whoimg2"
+                  className="w-80 h-64 object-cover object-top"
+                />
+
+                <img
+                  src={imgclock}
+                  alt="imgpesa"
+                  className="absolute inset-0 mx-auto -top-10 w-20 background-primary p-5 rounded-full"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col items-center text-center max-w-80 bg-gray-200" data-aos="zoom-out">
+              <div className="py-10 px-8 pb-20">
+                <h3 className="text-xl font-semibold mb-5">Expert Trainers</h3>
+                <p className="text-gray-600 text-base/7">
+                  Our certified team is ready to guide you.
+                </p>
+              </div>
+              <div className="relative flex justify-center items-center">
+                <img 
+                  src={whoimg3}
+                  alt="whoimg3"
+                  className="w-80 h-64 object-cover object-top"
+                />
+
+                <img
+                  src={imgarm}
+                  alt="imgpesa"
+                  className="absolute inset-0 mx-auto -top-10 w-24 background-primary p-5 rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default Home;

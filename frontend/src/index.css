@@ -33,9 +33,18 @@
     color: var(--color);
 }
 
+
+.link {
+    text-decoration: none;
+}
+
 .link:hover {
     color: var(--color);
     border-bottom: var(--color);
     border-bottom: 2px solid var(--color);
     padding-bottom: 3px;
+}
+
+.background-primary {
+    background-color: var(--color);
 }
