@@ -8,9 +8,7 @@ function Navigation() {
 
   return (
     <header
-      className={` ${
-        isOpen ? "bg-stone-950" : "header"
-      } text-white sticky top-0 z-50 h-16`}
+      className={`text-white sticky top-0 z-50 h-16 bg-stone-950`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -22,7 +20,7 @@ function Navigation() {
           </div>
 
           {/* Hamburger Menu (Mobile) */}
-          <div className="md:hidden">
+          <div className="md:hidden z-50">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white focus:outline-none"
@@ -79,7 +77,7 @@ function Navigation() {
                   className="link font-bold duration-100"
                   onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic en el enlace
                 >
-                  About
+                  About Us
                 </Link>
               </li>
               <li>
@@ -97,7 +95,7 @@ function Navigation() {
                   className="link font-bold duration-100"
                   onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic en el enlace
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,4 @@
-import AboutUs from "../components/Aboutus";
+import AboutUs from "./Aboutus";
 import CategoryCard from "../components/CategoryCard";
 import Hero from "../components/Hero";
 
@@ -27,7 +27,6 @@ function Home() {
       <Hero />
 
       {/* Breve descriptión */}
-      <AboutUs />
 
       {/* Featured Products */}
       <section className="pt-20 pb-32 px-12 bg-gray-200">

@@ -5,8 +5,6 @@ import "animate.css";
 function Hero() {
   return (
     <section className="hero flex flex-col items-center justify-center text-center text-white gap-10 bg-cover bg-center relative">
-      {/* Fondo con desenfoque */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <h1 className="text-3xl md:text-5xl font-extrabold leading-tight transform opacity-0 animate__animated animate__fadeIn animate__delay-0.8s">
         Transform Your Life with Fitness Supplements

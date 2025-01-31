@@ -2,8 +2,8 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import  Navigation  from './components/Navigation'
 import Home from './pages/Home'
 import Products from './pages/Products'
-import Contact from './components/Contact'
-import Aboutus from './components/Aboutus'
+import Contact from './pages/Contact'
+import Aboutus from './pages/Aboutus'
 import Footer from './components/Footer'
 
 
