@@ -1,6 +1,6 @@
 import AboutUs from "./Aboutus";
 import CategoryCard from "../components/CategoryCard";
-import Hero from "../components/Hero";
+import Hero from "../components/Hero/Hero";
 
 
 import AOS from 'aos';

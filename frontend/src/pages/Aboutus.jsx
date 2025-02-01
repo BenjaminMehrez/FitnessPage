@@ -2,7 +2,7 @@ import imgaboutus from "/imgabout.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import HeroAbout from "../components/HeroAbout";
+import HeroAbout from "../components/Hero/HeroAbout";
 // ..
 AOS.init();
 

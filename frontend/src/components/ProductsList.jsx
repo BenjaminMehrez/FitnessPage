@@ -26,7 +26,7 @@ export function ProductsList() {
     }, []);
 
     return (
-        <div className="flex mt-20 gap-20">
+        <div className="flex flex-wrap justify-center mt-20 gap-15">
             {isLoading ? (
                 <div>Cargando productos...</div>
             ) : error ? (

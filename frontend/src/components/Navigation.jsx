@@ -73,20 +73,20 @@ function Navigation() {
               </li>
               <li>
                 <Link
-                  to="/aboutus"
-                  className="link font-bold duration-100"
-                  onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic en el enlace
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/products"
                   className="link font-bold duration-100"
                   onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic en el enlace
                 >
                   Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/aboutus"
+                  className="link font-bold duration-100"
+                  onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic en el enlace
+                >
+                  About Us
                 </Link>
               </li>
               <li>

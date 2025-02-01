@@ -1,5 +1,5 @@
 // src/pages/Contact.jsx
-import HeroContact from "../components/HeroContact";
+import HeroContact from "../components/Hero/HeroContact";
 import contactimg from "/imgcontact.jpg";
 
 function Contact() {
@@ -55,7 +55,7 @@ function Contact() {
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-lime-400 text-black py-3 rounded-lg font-semibold text-lg transition duration-300 hover:bg-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-300"
+                className="w-full bg-lime-400 cursor-pointer text-black py-3 rounded-lg font-semibold text-lg transition duration-300 hover:bg-lime-500 focus:outline-none focus:ring-2 focus:ring-lime-300"
               >
                 SEND MESSAGE
               </button>
