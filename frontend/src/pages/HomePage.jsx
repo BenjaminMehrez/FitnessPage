@@ -1,4 +1,3 @@
-import AboutUs from "./Aboutus";
 import CategoryCard from "../components/CategoryCard";
 import Hero from "../components/Hero/Hero";
 

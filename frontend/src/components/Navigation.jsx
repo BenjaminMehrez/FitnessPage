@@ -98,6 +98,15 @@ function Navigation() {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/product-create"
+                  className="link font-bold duration-100"
+                  onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic en el enlace
+                >
+                  Create Product
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

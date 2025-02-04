@@ -1,10 +1,11 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import  Navigation  from './components/Navigation'
-import Home from './pages/Home'
-import Products from './pages/Products'
-import Contact from './pages/Contact'
-import Aboutus from './pages/Aboutus'
+import HomePage from './pages/HomePage'
+import ProductsPage from './pages/ProductsPage'
+import ContactPage from './pages/ContactPage'
+import AboutusPage from './pages/AboutusPage'
 import Footer from './components/Footer'
+import ProductCreatePage from './pages/ProductCreatePage'
 
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
             <Navigation />
             <main>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/products/" element={<Products />} />
-                    <Route path="/aboutus/" element={<Aboutus />} />
-                    <Route path="/contact/" element={<Contact />} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/products/" element={<ProductsPage />} />
+                    <Route path="/aboutus/" element={<AboutusPage />} />
+                    <Route path="/contact/" element={<ContactPage />} />
+                    <Route path="/product-create/" element={<ProductCreatePage />} />
                 </Routes>
             </main>
             <Footer />
