@@ -1,6 +1,13 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function ProductCard({ product }) {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/product/' + product.pid);
+  }
 
   return (
     <div className="card bg-base-100 w-96 drop-shadow-2xl">
@@ -14,7 +21,7 @@ function ProductCard({ product }) {
       <div className="card-body items-center text-center">
         <h2 className="card-title">{product.title}</h2>
         <div className="card-actions">
-          <button className="btn background-primary">View</button>
+          <button onClick={handleClick} className="btn background-primary">View</button>
         </div>
       </div>
     </div>

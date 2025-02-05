@@ -5,7 +5,6 @@ import "animate.css";
 function Hero() {
   return (
     <section className="hero flex flex-col items-center justify-center text-center text-white gap-10 bg-cover bg-center relative">
-
       <h1 className="text-3xl md:text-5xl font-extrabold leading-tight transform opacity-0 animate__animated animate__fadeIn animate__delay-0.8s">
         Transform Your Life with Fitness Supplements
       </h1>
@@ -16,7 +15,7 @@ function Hero() {
 
       <Link
         to="/products"
-        className="btn mt-10 bg-white text-black px-8 py-4 rounded-lg font-bold transform opacity-0 animate__animated animate__fadeIn animate__delay-2s hover:bg-gray-200 transition duration-300"
+        className="btn mt-10 bg-white text-black px-8 py-4 rounded-lg font-bold transform opacity-0 animate__animated animate__fadeIn animate__delay-2s hover:bg-gray-200 transition duration-300 background-primary"
       >
         Start Your Fitness Journey Now
       </Link>

@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage'
 import AboutusPage from './pages/AboutusPage'
 import Footer from './components/Footer'
 import ProductCreatePage from './pages/ProductCreatePage'
+import ProductPage from './pages/ProductPage'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/aboutus/" element={<AboutusPage />} />
                     <Route path="/contact/" element={<ContactPage />} />
                     <Route path="/product-create/" element={<ProductCreatePage />} />
+                    <Route path="/products/:id/" element={<ProductPage />} />
                 </Routes>
             </main>
             <Footer />
